@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<!-- span tuh biasa dipake buat tulisan -->
+
+<body>
+    <!-- blok itu kyk display (elemennya full dri kiri ke kanan, jadi kalo nambahin item baru dia akan turun kebawh krn sampingnya udh full) -->
+    <div class="bg-red-400 block"> kotak 1 (blok)</div>
+    <div class="bg-amber-200 block"> kotak 1 (blok)</div>
+    <div class="bg-sky-400 blok">kotak 2 (blok)</div>
+
+    <br>
+    <!-- kalo pake yg inline dia lanjutnya ke samping, karna dia menyesuaikan samaa itemnya, tapi dia gabisa merubah width atau height nya -->
+    <span class="bg-green-200 inline"> kotak 1 (inline)</span>
+    <span class="bg-red-300 inline"> kotak 2 (inline)</span>
+
+    <br>
+    <br>
+    <!-- kalo inline blok bisa ngatur height sama width -->
+    <span class="bg-gray-400 inline-block w-24 h-12">Kotak 1</span>
+    <span class="bg-orange-500 inline-block w-24 h-12">Kotak 1</span>
+
+    <br>
+    <!-- flex itu horizontal -->
+    <!-- kalo flex nya 1 nnti kotaknya gaada jarak -->
+    <div class="flex flex-col gap-2 bg-amber-950 p-2">
+        <div class="bg-amber-200 w-16 h-16">A</div>
+        <div class="bg-blue-200 w-16 h-16">B</div>
+        <div class="bg-pink-200 w-16 h-16">C</div>
+        <!-- flex berteman sama :
+          justify : mengatur arah horizontal 
+          (align) ga ada di tailwind, jdi gantinya (item) : atur arah vertikal
+          gap : atur jarak antar item -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="shortcut icon" href="[118] avatar 𓂃꙳⋆.jpeg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+            <link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    .font-pp {
+        font-family: "Roboto", sans-serif;
+    }
+    .bg-nav {
+        background-color: #44444E;
+    }
+    .bg-lp {
+        background-color: #37353E;
+    }
+    .bg-border {
+        background-color: #715A5A;
+    }
+    .text-oren {
+        color: var(--color-amber-500);
+    }
+    .bg-terang {
+        background-color: #D3DAD9;
+    }
+</style>
+<body>
+    <!-- sticky biar nempel, z biar elememnnya ga ketumpuk -->
+    <nav class="sticky top-0 z-50 bg-[#44444E]/90 backdrop-blur border-b border-white" aria-label="primary">
+        <!-- aria-label untuk disabilitas agar screen leader bisa dengan mudah membacanya-->
+        <!-- z-index biar elemennya ga ketumpuk sm elemen lain -->
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- untuk menu di laptop -->
+            <div class="flex items-center justify-between h-16 font-pp">
+                <a href="#" class="flex items-center text-white text-xl uppercase tracking-wider font-semibold">PP</a>
+
+            <button
+            id="hamburger"
+            class="md:hidden p-2 rounded bg-white hover:bg-amber-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle menu">
+            <svg
+              id="icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg
+              id="icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+                <div id="main-menu" class="hidden md:flex md:items-center md:gap-2 justify-between">
+                    <div class="flex flex-col md:flex-row md:items-center md:gap-2 text-right md:text-left">
+                        <a href="#aboutMe" class="px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-semibold">About Me</a>
+                        <a href="#whatIDo" class="px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-semibold">What I Do?</a>
+                        <a href="#portfolio" class="px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-semibold">Portfolio</a>
+                        <a href="#mySkills" class="px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-semibold">Skills</a>
+                        <a href="#myBlog" class="px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-semibold">Blog</a>
+                        <a href="#contactMe" class="bg-amber-600 hover:bg-amber-800 rounded-xl px-4 py-2 font-semibold text-white font-pp justify-center items-center">Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- menu untuk hp -->
+                 <div id="mobile-panel" class="md:hidden hidden border-t border-white py-2">
+                    <a href="#aboutMe" class="block px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-pp font-semibold">About Me</a>
+                    <a href="#whatIDo" class="block px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-pp font-semibold">What I Do?</a>
+                    <a href="#portfolio" class="block px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-pp font-semibold">Portfolio</a>
+                    <a href="#mySkills" class="block px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-pp font-semibold">Skills</a>
+                    <a href="#myBlog" class="block px-3 py-2 text-slate-100 hover:text-amber-300 uppercase font-pp font-semibold">Blog</a>
+                    <a href="#contactMe" class="block bg-amber-600 hover:bg-amber-800 rounded-xl px-4 py-2 font-semibold text-white font-pp justify-center items-center">Contact Me</a>
+
+                 </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- about me -->
+    <section id="aboutMe" class="bg-[#37353E]">
+        <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
+
+            <div class="order-2 border-[12px] sm:border-[16px] border-[#715A5A] rounded-2xl shadow-2xl overflow-hidden">
+                <img src="[118] avatar 𓂃꙳⋆.jpeg" class="w-full h-full object-cover">
+            </div>
+
+            <!-- leading = jarak antar baris // tracking = jarak antar huruf-->
+            <div class="order-1 lg:order-1">
+                <h1 class="font-pp text-white text-5xl font-bold leading-tight">Hello, I'm <span class="text-amber-500"> amiihndy</span></h1>
+                <h2 class="font-pp text-white text-2xl font-semibold">Web / Mobile Developer</h2>
+                <p class="mt-5 leading-relaxed text-slate-50 font-pp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto officia quae, quas maxime nisi consequatur modi neque temporibus perspiciatis soluta provident iste nulla</p>
+                <!-- flex wrap itu kl nnti kepenuhan dia otomatis turun kebawah -->
+                <div class="mt-6 flex flex-wrap items-center gap-4">
+                    <a href="" class="inline-flex items-center justify-center rounded-lg bg-[#D3DAD9] hover:bg-amber-500 text-[#37353E] px-4 py-3 text-2xl "><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="" class="inline-flex items-center justify-center rounded-lg bg-[#D3DAD9] hover:bg-amber-500 text-[#37353E] px-4 py-3 text-2xl "><i class="fa-brands fa-square-behance"></i></a>
+                    <a href="" class="inline-flex items-center justify-center rounded-lg bg-[#D3DAD9] hover:bg-amber-500 text-[#37353E] px-4 py-3 text-2xl "><i class="fa-brands fa-github"></i></a>
+                    <a href="" class="inline-flex items-center justify-center rounded-lg bg-[#D3DAD9] hover:bg-amber-500 text-[#37353E] px-4 py-3 text-2xl "><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="" class="inline-flex items-center justify-center rounded-lg bg-[#D3DAD9] hover:bg-amber-500 text-[#37353E] px-4 py-3 text-2xl "><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- what i do? -->
+    <section id="whatIDo" class="bg-nav">
+        <div class="max-w-full mx-auto px-4 md:px-8 py-20 border-t border-[#37353E]">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-pp text-white underline underline-offset-8 decoration-amber-500 decoration-4 uppercase tracking-widest">What I Do?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="rounded-xl bg-[#37353E] shadow-2xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 grid rounded-full bg-[#D3DAD9] place-items-center">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <h3 class="text-white font-pp font-semibold text-lg tracking-wider">Web Design</h3>
+                    </div>
+                    <p class="text-white font-pp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem provident commodi facilis, maiores, perferendis optio dolor quas repellat.</p>
+                </div>
+                <div class="rounded-xl bg-[#37353E] shadow-2xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 grid rounded-full bg-[#D3DAD9] place-items-center">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-white font-pp font-semibold text-lg tracking-wider">App Design</h3>
+                    </div>
+                    <p class="text-white font-pp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem provident commodi facilis, maiores, perferendis optio dolor quas repellat.</p>
+                </div>
+                <div class="rounded-xl bg-[#37353E] shadow-2xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 grid rounded-full bg-[#D3DAD9] place-items-center">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-white font-pp font-semibold text-lg tracking-wider">Branding</h3>
+                    </div>
+                    <p class="text-white font-pp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem provident commodi facilis, maiores, perferendis optio dolor quas repellat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio -->
+     <section id="portfolio" class="bg-nav">
+        <div class="max-w-full mx-auto px-4 md:px-8 py-20 border-t border-[#37353E]">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-pp text-white underline underline-offset-8 decoration-amber-500 decoration-4 uppercase tracking-widest">Portfolio</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="rounded-xl bg-[#37353E]/70 shadow-2xl p-6 text-center">
+                    <div class="flex items-center gap-3 mb-3">
+                        <a href="https://i.pinimg.com/1200x/65/44/8c/65448c2db4d98aeb01d91cbdbb3f8756.jpg" class="w-full grid bg-[#D3DAD9] place-items-center">
+                            <img src="https://i.pinimg.com/736x/85/98/cd/8598cd1dc491689f056dae0a6f1ba202.jpg" alt="" class="w-full h-15 object-cover">
+                        </a>
+                    </div>
+                    <h3 class="text-white font-pp font-semibold text-lg tracking-wider">Website With React JS</h3>
+                    <p class="text-white font-pp">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="rounded-xl bg-[#37353E]/70 shadow-2xl p-6 text-center">
+                    <div class="flex items-center gap-3 mb-3">
+                        <a href="https://i.pinimg.com/1200x/65/44/8c/65448c2db4d98aeb01d91cbdbb3f8756.jpg" class="w-full grid bg-[#D3DAD9] place-items-center">
+                            <img src="https://i.pinimg.com/736x/85/98/cd/8598cd1dc491689f056dae0a6f1ba202.jpg" alt="" class="w-full h-15 object-cover">
+                        </a>
+                    </div>
+                    <h3 class="text-white font-pp font-semibold text-lg tracking-wider">Website With React JS</h3>
+                    <p class="text-white font-pp">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="rounded-xl bg-[#37353E]/70 shadow-2xl p-6 text-center">
+                    <div class="flex items-center gap-3 mb-3">
+                        <a href="https://i.pinimg.com/1200x/65/44/8c/65448c2db4d98aeb01d91cbdbb3f8756.jpg" class="w-full grid bg-[#D3DAD9] place-items-center">
+                            <img src="https://i.pinimg.com/736x/85/98/cd/8598cd1dc491689f056dae0a6f1ba202.jpg" alt="" class="w-full h-15 object-cover">
+                        </a>
+                    </div>
+                    <h3 class="text-white font-pp font-semibold text-lg tracking-wider">Website With React JS</h3>
+                    <p class="text-white font-pp">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- my skills -->
+     <section id="mySkills" class="bg-[#37353E]">
+        <div class="max-w-full mx-auto px-4 md:px-8 py-20 border-t border-[#37353E] font-pp">
+           <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-pp text-white underline underline-offset-8 decoration-amber-500 decoration-4 uppercase tracking-widest">My Skills</h2>
+            </div>
+            <div class="text-left text-white pl-4">
+                <h3 class="font-bold text-2xl pb-2">Web Developer<h3>
+                <p class="text-lg">Saya Memiliki Skill Seperti Berikut</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6 mt-5">
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="https://i.pinimg.com/1200x/2c/00/c9/2c00c95d301bb0babe84c51cc425ad60.jpg" class="w-14 h-14">
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="https://i.pinimg.com/1200x/a7/d5/c3/a7d5c3282d1f002ed0cc25e47c1afdff.jpg" class="w-14 h-14">
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="html-1.svg" class="w-14 h-14">
+                    </div>
+
+                </div>
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="https://i.pinimg.com/736x/96/e6/8d/96e68d712f51757ac07cfe22354d8be8.jpg" class="w-14 h-14">
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="adobe-experience-design-1.svg" class="w-14 h-14">
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="blender-2.svg" class="w-14 h-14">
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="Sketch_icon_logo_vector__svg__ai__formats_free_download_-_Brandlogos_net-removebg-preview.png" class="w-14 h-14">
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-nav shadow-2xl p-2">
+                    <div class="flex items-center justify-center gap-3">
+                        <img src="figma-icon.svg" class="w-14 h-14">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- my blog -->
+      <section id="myBlog" class="bg-nav font-pp">
+        <div class="max-w-full px-4 md:px-8 py-20 border-t border-[#37353E]">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-pp text-white underline underline-offset-8 decoration-amber-500 decoration-4 uppercase tracking-widest">My Blog</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 font-pp">
+                <div class="rounded-xl bg-[#37353E] shadow-2xl p-6">
+                        <!-- Bagian tanggal -->
+                    <div class="w-40 grid grid-cols-2 mask-x-to-yellow-600">
+                        <div class="justify-center">
+                        <p class="text-sm text-white font-bold">Aug</p>
+                            <!-- Garis pemisah -->
+                             <div class="text-white justify-center items-center font-extralight pb-2">____</div>
+                        <p class="text-xl font-bold text-white pt-2">24</p>
+                        </div>
+                        <div class="justify-start leading-2 w-60">
+                            <p class="text-amber-500 text-sm font-semibold py-1">JANE DOE</p>
+                            <h2 class="text-lg font-bold text-white py-1">Review Jasa Website</h2>
+                            <p class="text-white text-sm py-2">Jasanya bagus, good job dan cepat</p>
+                            <a href="#" class="text-amber-500 font-medium hover:underline py-3">Read More</a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="rounded-xl bg-[#37353E] shadow-2xl p-6">
+                        <!-- Bagian tanggal -->
+                    <div class="w-40 grid grid-cols-2 mask-x-to-yellow-600">
+                        <div class="justify-center">
+                        <p class="text-sm text-white font-bold">Aug</p>
+                            <!-- Garis pemisah -->
+                             <div class="text-white justify-center items-center font-extralight pb-2">____</div>
+                        <p class="text-xl font-bold text-white pt-2">24</p>
+                        </div>
+                        <div class="justify-start leading-2 w-60">
+                            <p class="text-amber-500 text-sm font-semibold py-1">JANE DOE</p>
+                            <h2 class="text-lg font-bold text-white py-1">Review Jasa Website</h2>
+                            <p class="text-white text-sm py-2">Jasanya bagus, good job dan cepat</p>
+                            <a href="#" class="text-amber-500 font-medium hover:underline py-3">Read More</a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="rounded-xl bg-[#37353E] shadow-2xl p-6">
+                        <!-- Bagian tanggal -->
+                    <div class="w-40 grid grid-cols-2 mask-x-to-yellow-600">
+                        <div class="justify-center">
+                        <p class="text-sm text-white font-bold">Aug</p>
+                            <!-- Garis pemisah -->
+                             <div class="text-white justify-center items-center font-extralight pb-2">____</div>
+                        <p class="text-xl font-bold text-white pt-2">24</p>
+                        </div>
+                        <div class="justify-start leading-2 w-60">
+                            <p class="text-amber-500 text-sm font-semibold py-1">JANE DOE</p>
+                            <h2 class="text-lg font-bold text-white py-1">Review Jasa Website</h2>
+                            <p class="text-white text-sm py-2">Jasanya bagus, good job dan cepat</p>
+                            <a href="#" class="text-amber-500 font-medium hover:underline py-3">Read More</a>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </section>
+
+    <!-- contact me -->
+     <section id="contactMe" class="bg-[#37353E]">
+        <div class="max-w-full mx-auto px-4 md:px-8 py-20 border-t border-[#37353E] font-pp">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold font-pp text-white underline underline-offset-8 decoration-amber-500 decoration-4 uppercase tracking-widest">Contact Me</h2>
+                <p class="uppercase py-4 font-light text-white text-xl">hubungi kami jika ingin bekerjasama</p>
+            </div>
+            
+            <div class="bg-nav p-8 rounded-xl px-6 max-w-3xl mx-auto">
+                <form class="space-y-4 text-left">
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="order-1">
+                            <p class="text-white uppercase">NAME</p>
+                            <input
+                            type="text"
+                            placeholder="your name"
+                            class="w-full p-3 border border-[#37353E] rounded focus:ring-2 focus:ring-[#37353E] bg-[#BFBFC2]"
+                            >
+                        </div>
+
+                        <div class="order-2">
+                            <p class="text-white">Email</p>
+                            <input 
+                            type="email"
+                            placeholder="your email"
+                            class="w-full p-3 border border-[#37353E] rounded focus:ring-2 focus:ring-[#37353E] bg-[#BFBFC2]"
+                            >
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-white uppercase">message</p>
+                        <textarea 
+                        name="message" 
+                        rows="5" 
+                        placeholder="your message"
+                        class="w-full p-3 border border-[#37353E] rounded focus:ring-2 focus:ring-[#37353E] bg-[#BFBFC2]"
+                        ></textarea>
+                        <button class="w-full p-3 border bg-amber-600 text-white rounded hover:bg-amber-800">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+     </section>
+
+     <!-- footer -->
+      <footer class="bg-nav text-white pt-10 pb-5 px-6">
+            <div class="maw-w-full mx-auto items-center justify-center grid grid-cols-3">
+                <iframe class="p-10 w-400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.970149978029!2d107.03544617475333!3d-6.525453793467134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bd27c6b9b645%3A0x600dcb86d7b2feb3!2sPoliteknik%20IDN!5e0!3m2!1sid!2sid!4v1756967600378!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="text-center font-pp">F2FQ+R66, Sukanegara, Kec. Jonggol, Kabupaten Bogor, Jawa Barat 16830</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="#" class="hover:text-amber-500"><i class="fab fa-linkedin fa-2xl"></i></a>
+                    <a href="#" class="hover:text-amber-500"><i class="fab fa-github fa--2xl"></i></a>
+                    <a href="#" class="hover:text-amber-500"><i class="fab fa-instagram fa-2xl"></i></a>
+                    <a href="#" class="hover:text-amber-500"><i class="fab fa-youtube fa-2xl"></i></a>
+                 </div>
+            </div>
+
+            <div class="maw-w-5xl mx-auto text-center">
+                 <p class="font-pp">Copyright &copy; 2025 -  All Rights Reserved by Amiihndy</p>
+            </div>
+        </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      AOS.init({
+        duration: reduceMotion ? 0 : 600,
+        once: true,
+      });
+
+      const btn = document.getElementById("hamburger");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+      const menu = document.getElementById("main-menu");
+      const panel = document.getElementById("mobile-panel");
+
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+        panel.classList.toggle("hidden");
+      });
+
+      panel?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          btn.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+          panel.classList.add("hidden");
+        });
+
+      });
+    </script>
+</body>
+</html>
